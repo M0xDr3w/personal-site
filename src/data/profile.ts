@@ -45,9 +45,9 @@ export const profile = {
       title: "Elden Volt",
       subtitle: "Tesla Souls — game prototype",
       description:
-        "A Phaser.js soulslike prototype blending Elden Ring combat vibes with a Tesla-themed twist. Dodge rolls, stamina management, and boss fights — all in the browser.",
+        "A Phaser.js soulslike prototype blending Elden Ring combat vibes with a Tesla-themed twist. Dodge rolls, stamina management, and boss fights — all in the browser. Play the prototype directly.",
       tech: ["JavaScript", "Phaser 3", "HTML5"],
-      link: null,
+      link: "/games/elden-volt.html",
       featured: true,
     },
     {
@@ -61,11 +61,11 @@ export const profile = {
     },
     {
       title: "Your next project",
-      subtitle: "Slot open",
+      subtitle: "Collaboration welcome",
       description:
-        "Got something cool you're working on? Drop it in src/data/profile.ts and it'll show up here automatically.",
-      tech: ["TBD"],
-      link: null,
+        "Building something interesting? I'm always down to chat ideas, contribute, or pair on prototypes. Reach out.",
+      tech: ["Let's talk"],
+      link: "#contact",
       featured: false,
     },
   ],
