@@ -42,15 +42,6 @@ export const profile = {
   ],
   projects: [
     {
-      title: "Elden Volt",
-      subtitle: "Tesla Souls — game prototype",
-      description:
-        "A Phaser.js soulslike prototype blending Elden Ring combat vibes with a Tesla-themed twist. Dodge rolls, stamina management, and boss fights — all in the browser. Play the prototype directly.",
-      tech: ["JavaScript", "Phaser 3", "HTML5"],
-      link: "/games/elden-volt.html",
-      featured: true,
-    },
-    {
       title: "This website",
       subtitle: "Custom personal profile",
       description:
