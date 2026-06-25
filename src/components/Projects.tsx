@@ -15,7 +15,8 @@ export function Projects() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {featured.map((project) => {
-            const isInternal = project.link?.startsWith("#") || project.link?.startsWith("/");
+            const link = project.link;
+            const isInternal = (link || '').startsWith('#') || (link || '').startsWith('/');
 
             return (
               <article
@@ -39,9 +40,9 @@ export function Projects() {
                   ))}
                 </div>
 
-                {project.link && (
+                {link && (
                   <a
-                    href={project.link}
+                    href={link}
                     target={isInternal ? undefined : "_blank"}
                     rel={isInternal ? undefined : "noopener noreferrer"}
                     className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent transition hover:gap-2"
