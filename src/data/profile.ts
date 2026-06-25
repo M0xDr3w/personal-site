@@ -51,6 +51,15 @@ export const profile = {
       featured: true,
     },
     {
+      title: "MakerLog",
+      subtitle: "Personal project tracker",
+      description:
+        "Local-first Streamlit app for logging builds, field work, experiments, and side projects. Includes streak tracking, data viz, and CSV export.",
+      tech: ["Python", "Streamlit", "Pandas", "Plotly"],
+      link: null,
+      featured: true,
+    },
+    {
       title: "Your next project",
       subtitle: "Collaboration welcome",
       description:
