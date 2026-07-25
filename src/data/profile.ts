@@ -1,83 +1,115 @@
 export const profile = {
-  name: "Andrew MacDonald",
-  headline: "Builder · Problem-solver · Maker of cool things",
-  location: "Newfoundland, Canada",
+  name: "Andrew Macdonald",
+  firstName: "Andrew",
+  lastName: "Macdonald",
+  headline: "I build useful things — on job sites, in markets, and behind a keyboard.",
+  location: "Born in Newfoundland, Canada",
   status: "Open to new opportunities",
-  email: "your.email@example.com", // ← update this
+  email: "drewmax@spacetrendr.com",
+  resume: null as string | null,
+
   about: [
-    "I'm Andrew — someone who likes getting hands-on, figuring things out, and building stuff that actually works. Whether it's on a job site, in a spreadsheet, or behind a keyboard, I care about doing the work well and leaving things better than I found them.",
-    "Outside of work I've been tinkering with code — game prototypes, Python scripts, whatever catches my interest. This site is my corner of the internet: less corporate résumé, more me.",
+    "I'm a hands-on builder who likes figuring things out and leaving things better than I found them. My background runs from oilfield MPD work to RE/MAX real estate — and now I'm shipping side projects in public.",
+    "Right now I'm focused on TrendForge (live X trend radar + content forge) and the local-first Forge Suite. Learning fast, building in the open, and having fun with it.",
   ],
+
   highlights: [
     { label: "Years building", value: "10+" },
-    { label: "Industries", value: "3+" },
-    { label: "Side projects", value: "Always cooking" },
-    { label: "Coffee tolerance", value: "Legendary" },
+    { label: "Industries", value: "Oil & Gas → Real Estate → Tech" },
+    { label: "Real estate peak", value: "$85k+ commissions" },
+    { label: "Current path", value: "Field ops to code" },
   ],
+
   experience: [
     {
       company: "Oil & Gas / Field Operations",
       role: "Field Technician",
       period: "2023 — Present",
       description:
-        "Hands-on work in demanding environments — safety-first mindset, reliable under pressure, and comfortable with the physical + procedural side of complex operations.",
-      tags: ["Safety", "Operations", "Teamwork"],
+        "MPD operations — vessels, manifolds, rigging, crew coordination. Safety-first mindset with JSAs and field hazard assessments.",
+      tags: ["MPD", "Safety", "Rigging", "Crew work"],
     },
     {
-      company: "Real Estate",
-      role: "Sales & Client Relations",
+      company: "RE/MAX",
+      role: "Real Estate Sales",
       period: "2014 — 2020",
       description:
-        "Helped buyers and sellers navigate one of life's biggest decisions. Negotiation, market knowledge, and building trust with people from all walks of life.",
-      tags: ["Sales", "Negotiation", "Client service"],
+        "Lead gen, client presentations, and negotiations. Built trust with buyers and sellers across Newfoundland.",
+      tags: ["Sales", "Negotiation", "Marketing"],
     },
     {
-      company: "Various roles",
+      company: "Contract & generalist work",
       role: "Adaptable generalist",
       period: "Ongoing",
       description:
-        "From hospitality to trades-adjacent work — I've picked up skills fast, shown up consistently, and learned that attitude and reliability go further than any single credential.",
-      tags: ["Adaptability", "Work ethic", "Learning fast"],
+        "Trades-adjacent and oilfield contract roles. Show up, learn fast, solve problems — attitude beats credentials.",
+      tags: ["Adaptability", "Reliability", "Quick learner"],
     },
   ],
+
   projects: [
     {
-      title: "This website",
-      subtitle: "Custom personal profile",
+      title: "TrendForge",
+      tagline: "Real-time X trend radar + content forge",
       description:
-        "A LinkedIn-alternative that's actually mine — custom design, my story, my projects. Built with React, TypeScript, and Tailwind.",
-      tech: ["React", "TypeScript", "Vite", "Tailwind"],
-      link: null,
+        "Live X signals, narrative clusters, and human-gated angle forging (Grok or local LLM). Export MD + JSON. No auto-post.",
+      tech: ["React", "TypeScript", "Vite", "Recharts", "Vercel"],
+      demoUrl: "https://trendforge-opal.vercel.app",
+      repoUrl: "https://github.com/M0xDr3w/trendforge",
       featured: true,
+      bento: "large" as const,
+    },
+    {
+      title: "GrokSim",
+      tagline: "Grok Build simulator",
+      description:
+        "Interactive cheat sheet and terminal simulator for Grok Build — slash commands, shortcuts, skills, and MCP servers in one place.",
+      tech: ["React", "TypeScript", "Tailwind", "framer-motion"],
+      demoUrl: null,
+      repoUrl: "https://github.com/M0xDr3w/groksim",
+      featured: true,
+      bento: "default" as const,
     },
     {
       title: "MakerLog",
-      subtitle: "Personal project tracker",
-      description:
-        "Local-first Streamlit app for logging builds, field work, experiments, and side projects. Includes streak tracking, data viz, and CSV export.",
-      tech: ["Python", "Streamlit", "Pandas", "Plotly"],
-      link: null,
-      featured: true,
+      tagline: "Build tracker",
+      description: "Local-first logger for experiments and side projects. Charts, streaks, CSV export.",
+      tech: ["Python", "Streamlit", "SQLite"],
+      demoUrl: null,
+      repoUrl: "https://github.com/M0xDr3w/makerlog",
+      featured: false,
+      bento: "default" as const,
     },
     {
-      title: "Your next project",
-      subtitle: "Collaboration welcome",
-      description:
-        "Building something interesting? I'm always down to chat ideas, contribute, or pair on prototypes. Reach out.",
-      tech: ["Let's talk"],
-      link: "#contact",
+      title: "Regex Forge",
+      tagline: "Plain English → regex",
+      description: "Describe a pattern in words, get a tested regex back. Live tester with instant highlighting.",
+      tech: ["Next.js", "TypeScript", "xAI API"],
+      demoUrl: null,
+      repoUrl: "https://github.com/M0xDr3w/regex-forge",
       featured: false,
+      bento: "default" as const,
     },
   ],
-  skills: {
-    "Hands-on": ["Field operations", "Safety protocols", "Troubleshooting", "Physical stamina"],
-    "People": ["Client relations", "Negotiation", "Clear communication", "Reliability"],
-    "Tech (learning)": ["Python", "JavaScript", "Rust", "React", "Streamlit"],
-    "Other": ["Real estate", "Project planning", "Quick learner", "Detail-oriented"],
-  },
+
+  interests: [
+    {
+      title: "Outdoors",
+      emoji: "🏔️",
+      description: "Crags, rivers, and trails — usually somewhere windy.",
+      activities: ["Climbing", "Fishing", "Hiking"],
+    },
+  ],
+
+  books: [] as string[],
+
   links: [
-    { label: "GitHub", url: "https://github.com/yourusername", icon: "github" },
-    { label: "LinkedIn", url: "https://linkedin.com/in/yourprofile", icon: "linkedin" },
-    { label: "Email", url: "mailto:your.email@example.com", icon: "mail" },
+    { label: "GitHub", url: "https://github.com/M0xDr3w", icon: "github" as const },
+    {
+      label: "",
+      url: "https://x.com/M0xDr3w",
+      icon: "x" as const,
+      badge: "/heart.svg",
+    },
   ],
 } as const;
