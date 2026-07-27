@@ -2,46 +2,43 @@ import { profile } from "../data/profile";
 
 export function Experience() {
   return (
-    <section id="experience" className="border-t border-border bg-card/40 px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-5xl">
+    <section id="experience" className="border-t border-border px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-4xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
           Experience
         </p>
         <h2 className="font-serif text-3xl text-ink md:text-4xl">
-          Where I've been
+          What I'm building
         </h2>
 
-        <div className="relative mt-12 space-y-0">
-          <div className="absolute bottom-0 left-[7px] top-2 w-px bg-border md:left-[11px]" />
+        <div className="mt-12 space-y-10">
+          {profile.experience.map((job, idx) => (
+            <div key={job.company} className="relative pl-6">
+              <div className="absolute left-0 top-2 h-2 w-2 rounded-full bg-accent" />
+              {idx < profile.experience.length - 1 && (
+                <div className="absolute bottom-0 left-[3px] top-4 w-px bg-border" />
+              )}
 
-          {profile.experience.map((job, i) => (
-            <article
-              key={job.company}
-              className="relative grid gap-4 pb-12 pl-8 md:grid-cols-[200px_1fr] md:gap-10 md:pl-12"
-              style={{ animationDelay: `${i * 0.1}s` }}
-            >
-              <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-accent bg-surface md:left-1" />
+              <p className="text-sm text-muted">{job.period}</p>
+              <h3 className="mt-1 font-serif text-xl text-ink">
+                {job.role}
+                <span className="text-muted"> · {job.company}</span>
+              </h3>
+              <p className="mt-2 max-w-prose text-sm leading-relaxed text-muted">
+                {job.description}
+              </p>
 
-              <div>
-                <p className="text-sm font-medium text-accent">{job.period}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {job.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-ink">{job.role}</h3>
-                <p className="mt-1 text-muted">{job.company}</p>
-                <p className="mt-4 leading-relaxed text-muted">{job.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {job.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>

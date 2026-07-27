@@ -2,48 +2,32 @@ export const profile = {
   name: "Andrew Macdonald",
   firstName: "Andrew",
   lastName: "Macdonald",
-  headline: "I build useful things — on job sites, in markets, and behind a keyboard.",
+  headline: "I build useful things — shipping side projects in public.",
   location: "Born in Newfoundland, Canada",
   status: "Open to new opportunities",
   email: "drewmax@spacetrendr.com",
   resume: null as string | null,
 
   about: [
-    "I'm a hands-on builder who likes figuring things out and leaving things better than I found them. My background runs from oilfield MPD work to RE/MAX real estate — and now I'm shipping side projects in public.",
-    "Right now I'm focused on TrendForge (live X trend radar + content forge) and the local-first Forge Suite. Learning fast, building in the open, and having fun with it.",
+    "I'm a hands-on builder who likes figuring things out and leaving things better than I found them. Right now that means shipping software in public — products, tools, and experiments.",
+    "Focused on TrendForge (live X trend radar + content forge) and the local-first Forge Suite. Learning fast, iterating often, and having fun with it.",
   ],
 
   highlights: [
-    { label: "Years building", value: "10+" },
-    { label: "Industries", value: "Oil & Gas → Real Estate → Tech" },
-    { label: "Real estate peak", value: "$85k+ commissions" },
-    { label: "Current path", value: "Field ops to code" },
+    { label: "Focus", value: "Shipping products" },
+    { label: "Flagship", value: "TrendForge" },
+    { label: "Stack", value: "React · TS · local LLMs" },
+    { label: "Mode", value: "Build in public" },
   ],
 
   experience: [
     {
-      company: "Oil & Gas / Field Operations",
-      role: "Field Technician",
-      period: "2023 — Present",
+      company: "Independent",
+      role: "Builder — products & tools",
+      period: "Present",
       description:
-        "MPD operations — vessels, manifolds, rigging, crew coordination. Safety-first mindset with JSAs and field hazard assessments.",
-      tags: ["MPD", "Safety", "Rigging", "Crew work"],
-    },
-    {
-      company: "RE/MAX",
-      role: "Real Estate Sales",
-      period: "2014 — 2020",
-      description:
-        "Lead gen, client presentations, and negotiations. Built trust with buyers and sellers across Newfoundland.",
-      tags: ["Sales", "Negotiation", "Marketing"],
-    },
-    {
-      company: "Contract & generalist work",
-      role: "Adaptable generalist",
-      period: "Ongoing",
-      description:
-        "Trades-adjacent and oilfield contract roles. Show up, learn fast, solve problems — attitude beats credentials.",
-      tags: ["Adaptability", "Reliability", "Quick learner"],
+        "Shipping TrendForge, GrokSim, MakerLog, and Regex Forge. Product sense, full-stack UI, and local/cloud LLM wiring.",
+      tags: ["Product", "React", "TypeScript", "LLMs"],
     },
   ],
 

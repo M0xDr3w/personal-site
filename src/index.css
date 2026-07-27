@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Figtree", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
-  --color-ink: #f5f0e8;
-  --color-muted: #9a9288;
-  --color-surface: #141210;
-  --color-card: #1c1916;
-  --color-border: #2e2924;
-  --color-accent: #e8a54b;
-  --color-accent-dim: #b87d2e;
-  --color-glow: #e8a54b33;
+  --color-ink: #f4f4f5;
+  --color-muted: #a1a1aa;
+  --color-surface: #0a0a0f;
+  --color-card: #12121a;
+  --color-border: #27272f;
+  --color-accent: #f59e6c;
+  --color-accent-dim: #e07a4a;
+  --color-glow: #f59e6c22;
 }
 
 html {
@@ -25,24 +25,27 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::selection {
-  background: var(--color-accent);
-  color: #141210;
-}
-
-.grain {
-  pointer-events: none;
+body::before {
+  content: "";
   position: fixed;
   inset: 0;
-  z-index: 50;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 10%, #f59e6c0a, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, #6366f108, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, #12121a, transparent 70%);
+  pointer-events: none;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0a0a0f;
 }
 
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -51,5 +54,35 @@ body {
 }
 
 .animate-fade-up {
-  animation: fade-up 0.7s ease-out both;
+  animation: fade-up 0.6s ease-out both;
+}
+
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+
+.bento-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .bento-large {
+    grid-column: span 2;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

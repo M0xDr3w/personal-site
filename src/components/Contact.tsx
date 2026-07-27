@@ -8,13 +8,14 @@ function LinkIcon({ icon }: { icon: string }) {
       </svg>
     );
   }
-  if (icon === "linkedin") {
+  if (icon === "x") {
     return (
       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.127 0 2.061 2.061 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     );
   }
+
   return (
     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
@@ -30,7 +31,7 @@ function LinkIcon({ icon }: { icon: string }) {
 export function Contact() {
   return (
     <section id="contact" className="border-t border-border px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-5xl text-center">
+      <div className="mx-auto max-w-4xl text-center">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
           Contact
         </p>
@@ -38,7 +39,7 @@ export function Contact() {
           Let's connect
         </h2>
         <p className="mx-auto mt-4 max-w-md text-muted">
-          Whether it's work, a project idea, or just saying hey — my inbox is open.
+          Work, project ideas, or just saying hey — my inbox is open.
         </p>
 
         <a
@@ -48,6 +49,16 @@ export function Contact() {
           {profile.email}
         </a>
 
+        {profile.resume && (
+          <a
+            href={profile.resume}
+            download
+            className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-5 py-2 text-sm font-medium text-accent transition hover:bg-accent/20"
+          >
+            Download Resume →
+          </a>
+        )}
+
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           {profile.links.map((link) => (
             <a
@@ -55,10 +66,14 @@ export function Contact() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm text-muted transition hover:border-accent/50 hover:text-ink"
+              className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm text-muted transition hover:border-accent/40 hover:text-ink"
             >
               <LinkIcon icon={link.icon} />
-              {link.label}
+              {"badge" in link && link.badge ? (
+                <img src={link.badge} alt="" className="h-5 w-5 object-contain" />
+              ) : (
+                link.label
+              )}
             </a>
           ))}
         </div>

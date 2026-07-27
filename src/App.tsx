@@ -3,21 +3,20 @@ import { Contact } from "./components/Contact";
 import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
+import { Interests } from "./components/Interests";
 import { Nav } from "./components/Nav";
 import { Projects } from "./components/Projects";
-import { Skills } from "./components/Skills";
 
 export default function App() {
   return (
     <>
-      <div className="grain" aria-hidden="true" />
       <Nav />
       <main>
         <Hero />
+        <Projects />
         <About />
         <Experience />
-        <Projects />
-        <Skills />
+        <Interests />
         <Contact />
       </main>
       <Footer />
