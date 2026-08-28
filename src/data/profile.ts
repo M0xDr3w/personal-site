@@ -6,7 +6,7 @@ export const profile = {
   location: "Newfoundland → relocating to Toronto",
   status: "Hiring: in-person product / solutions engineer, Toronto",
   email: "drewmax@spacetrendr.com",
-  resume: "/Andrew-Macdonald-Resume.docx",
+  resume: "./Andrew-Macdonald-Resume.docx",
   resumeName: "Andrew-Macdonald-Resume.docx",
   proof: "Shipping TrendForge",
 
