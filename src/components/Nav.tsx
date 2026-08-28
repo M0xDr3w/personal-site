@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { profile } from "../data/profile";
 
 const links = [
-  { href: "#about", label: "About" },
   { href: "#work", label: "Work" },
-  { href: "#experience", label: "Experience" },
-  { href: "#interests", label: "Interests" },
+  { href: "#about", label: "About" },
+  { href: "#path", label: "Path" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -19,7 +19,8 @@ export function Nav() {
           href="#"
           className="font-serif text-xl tracking-tight text-ink transition hover:text-accent"
         >
-          AM
+          <span className="md:hidden">AM</span>
+          <span className="hidden md:inline">{profile.firstName}</span>
         </a>
 
         <ul className="hidden items-center gap-7 text-sm font-medium text-muted md:flex">
@@ -33,9 +34,18 @@ export function Nav() {
         </ul>
 
         <div className="flex items-center gap-3">
+          {profile.resume && (
+            <a
+              href={profile.resume}
+              download={profile.resumeName}
+              className="hidden rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent transition hover:bg-accent/20 md:block"
+            >
+              Resume
+            </a>
+          )}
           <a
             href="#contact"
-            className="hidden rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent transition hover:bg-accent/20 md:block"
+            className="hidden rounded-full border border-border px-4 py-1.5 text-sm font-medium text-muted transition hover:border-accent/40 hover:text-ink md:block"
           >
             Say hi
           </a>
@@ -75,10 +85,20 @@ export function Nav() {
                 </li>
               ))}
             </ul>
+            {profile.resume && (
+              <a
+                href={profile.resume}
+                download={profile.resumeName}
+                onClick={closeMenu}
+                className="mt-4 block w-full rounded-full border border-accent/30 bg-accent/10 py-3 text-center text-sm font-medium text-accent transition active:bg-accent/20"
+              >
+                Resume
+              </a>
+            )}
             <a
               href="#contact"
               onClick={closeMenu}
-              className="mt-4 block w-full rounded-full border border-accent/30 bg-accent/10 py-3 text-center text-sm font-medium text-accent transition active:bg-accent/20"
+              className="mt-3 block w-full rounded-full border border-border py-3 text-center text-sm font-medium text-muted transition active:text-ink"
             >
               Say hi
             </a>

@@ -1,4 +1,5 @@
 import { profile } from "../data/profile";
+import { useReveal } from "../hooks/useReveal";
 
 function ProjectLinks({
   demoUrl,
@@ -36,11 +37,16 @@ function ProjectLinks({
 }
 
 export function Projects() {
+  const ref = useReveal<HTMLElement>();
   const featured = profile.projects.filter((p) => p.featured);
   const secondary = profile.projects.filter((p) => !p.featured);
 
   return (
-    <section id="work" className="border-t border-border px-6 py-20 md:py-28">
+    <section
+      id="work"
+      ref={ref}
+      className="reveal border-t border-border px-6 py-20 md:py-28"
+    >
       <div className="mx-auto max-w-4xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
           Work
@@ -53,7 +59,7 @@ export function Projects() {
           {featured.map((project) => (
             <article
               key={project.title}
-              className={`group rounded-2xl border border-border bg-card p-6 md:p-8 transition hover:border-accent/30 ${
+              className={`group rounded-2xl border border-border border-l-2 border-l-accent/50 bg-card p-6 md:p-8 transition hover:border-accent/30 hover:border-l-accent ${
                 project.bento === "large" ? "bento-large" : ""
               }`}
             >

@@ -1,8 +1,15 @@
 import { profile } from "../data/profile";
+import { useReveal } from "../hooks/useReveal";
 
 export function About() {
+  const ref = useReveal<HTMLElement>();
+
   return (
-    <section id="about" className="border-t border-border px-6 py-20 md:py-28">
+    <section
+      id="about"
+      ref={ref}
+      className="reveal border-t border-border px-6 py-16 md:py-24"
+    >
       <div className="mx-auto max-w-4xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
           About

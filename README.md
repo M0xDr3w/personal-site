@@ -6,7 +6,7 @@ A custom personal portfolio built with React 19, TypeScript, Vite, and Tailwind 
 
 - Refined dark design with bento-style project grid
 - Data-driven content via `src/data/profile.ts`
-- Sections: Hero, Work, About, Experience, Interests, Contact
+- Sections: Hero, Work, About, Path, Contact
 - Live demo + source links for featured projects
 
 ## Tech Stack
