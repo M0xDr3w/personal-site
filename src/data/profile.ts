@@ -6,8 +6,8 @@ export const profile = {
   location: "Grand Valley, Ontario",
   status: "Building in public · Grand Valley, ON",
   email: "drewmax@spacetrendr.com",
-  resume: "./Andrew-Macdonald-Resume.docx",
-  resumeName: "Andrew-Macdonald-Resume.docx",
+  resume: "./Andrew-Macdonald-Resume.pdf",
+  resumeName: "Andrew-Macdonald-Resume.pdf",
   proof: "Building Operator Goods · TrendForge in production",
 
   about: [
