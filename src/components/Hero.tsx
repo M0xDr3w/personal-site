@@ -6,56 +6,70 @@ export function Hero() {
       <div className="hero-orb hero-orb-a" aria-hidden="true" />
       <div className="hero-orb hero-orb-b" aria-hidden="true" />
 
-      <div className="relative mx-auto max-w-4xl">
-        <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-sm text-muted">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-          </span>
-          {profile.status}
+      <div className="relative mx-auto flex max-w-4xl flex-col gap-10 md:flex-row md:items-center md:gap-14">
+        <div className="animate-fade-up order-1 shrink-0 md:order-2">
+          <div className="relative mx-auto h-36 w-36 overflow-hidden rounded-2xl border border-accent/40 shadow-[0_0_40px_var(--color-glow)] md:mx-0 md:h-44 md:w-44">
+            <img
+              src={profile.avatar}
+              alt={`${profile.name} — watercolor portrait`}
+              width={176}
+              height={176}
+              className="h-full w-full object-cover object-[42%_48%]"
+            />
+          </div>
         </div>
 
-        <h1 className="animate-fade-up stagger-1 max-w-3xl font-serif text-5xl leading-[1.08] tracking-tight text-ink md:text-7xl">
-          Hi, I'm{" "}
-          <span className="gradient-text italic">{profile.firstName}</span>
-          <br />
-          {profile.lastName}.
-        </h1>
+        <div className="order-2 min-w-0 md:order-1">
+          <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-sm text-muted">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            {profile.status}
+          </div>
 
-        <p className="animate-fade-up stagger-2 mt-6 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
-          {profile.headline}
-        </p>
+          <h1 className="animate-fade-up stagger-1 max-w-3xl font-serif text-5xl leading-[1.08] tracking-tight text-ink md:text-7xl">
+            Hi, I'm{" "}
+            <span className="gradient-text italic">{profile.firstName}</span>
+            <br />
+            {profile.lastName}.
+          </h1>
 
-        <p className="animate-fade-up stagger-3 mt-3 text-sm text-muted/70">
-          {profile.location}
-        </p>
+          <p className="animate-fade-up stagger-2 mt-6 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
+            {profile.headline}
+          </p>
 
-        <p className="animate-fade-up stagger-4 mt-4 text-sm font-medium text-accent/90">
-          {profile.proof}
-        </p>
+          <p className="animate-fade-up stagger-3 mt-3 text-sm text-muted/70">
+            {profile.location}
+          </p>
 
-        <div className="animate-fade-up stagger-5 mt-10 flex flex-wrap gap-4">
-          {profile.resume && (
+          <p className="animate-fade-up stagger-4 mt-4 text-sm font-medium text-accent/90">
+            {profile.proof}
+          </p>
+
+          <div className="animate-fade-up stagger-5 mt-10 flex flex-wrap gap-4">
+            {profile.resume && (
+              <a
+                href={profile.resume}
+                download={profile.resumeName}
+                className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-surface transition hover:bg-accent-dim"
+              >
+                Download resume
+              </a>
+            )}
             <a
-              href={profile.resume}
-              download={profile.resumeName}
-              className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-surface transition hover:bg-accent-dim"
+              href="#work"
+              className="rounded-full border border-border px-6 py-3 text-sm font-medium text-ink transition hover:border-accent/50 hover:text-accent"
             >
-              Download resume
+              See my work
             </a>
-          )}
-          <a
-            href="#work"
-            className="rounded-full border border-border px-6 py-3 text-sm font-medium text-ink transition hover:border-accent/50 hover:text-accent"
-          >
-            See my work
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full border border-border px-6 py-3 text-sm font-medium text-ink transition hover:border-accent/50 hover:text-accent"
-          >
-            Say hello
-          </a>
+            <a
+              href="#contact"
+              className="rounded-full border border-border px-6 py-3 text-sm font-medium text-ink transition hover:border-accent/50 hover:text-accent"
+            >
+              Say hello
+            </a>
+          </div>
         </div>
       </div>
     </section>
