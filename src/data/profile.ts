@@ -2,25 +2,25 @@ export const profile = {
   name: "Andrew Macdonald",
   firstName: "Andrew",
   lastName: "Macdonald",
-  headline: "I build coding and AI tools — with roots in real estate and energy services.",
-  location: "Newfoundland → relocating to Toronto",
-  status: "Hiring: in-person product / solutions engineer, Toronto",
+  headline: "Building in public — coding and AI tools.",
+  location: "Grand Valley, Ontario",
+  status: "Building in public · Grand Valley, ON",
   email: "drewmax@spacetrendr.com",
   resume: "./Andrew-Macdonald-Resume.docx",
   resumeName: "Andrew-Macdonald-Resume.docx",
-  proof: "Shipping TrendForge",
+  proof: "Building Operator Goods · TrendForge in production",
 
   about: [
     "I'm a hands-on builder who likes figuring things out and leaving things better than I found them. My path runs real estate → energy services → coding and AI work — and now I'm shipping side projects in public.",
-    "Moving to Toronto for an in-office product or solutions engineering seat. Looking for a room of people I want to build with — plus curious users who care about useful tools.",
+    "Building in public from Grand Valley, Ontario. Current focus: Operator Goods (operator apparel + desk gear; Notes blog + Lexicon) and TrendForge (production radar + forge under a spend cap).",
     "When I'm offline: climbing, fishing, and hiking — usually somewhere windy.",
   ],
 
   highlights: [
-    { label: "Next", value: "Toronto, in-person" },
+    { label: "Now", value: "Building in public · Grand Valley, ON" },
+    { label: "Building in public", value: "Operator Goods + TrendForge" },
+    { label: "Loops", value: "Assign → Execute → Review" },
     { label: "Path", value: "Real estate → Energy services → Coding & AI" },
-    { label: "Building in public", value: "TrendForge live" },
-    { label: "Approach", value: "Local-first tools" },
   ],
 
   experience: [
@@ -39,17 +39,28 @@ export const profile = {
     {
       title: "Coding & AI",
       description:
-        "Shipping tools in public — real-time X analysis, local-first workflows, and agentic side projects. Learning fast and iterating in the open.",
+        "Operator Goods (Vite/React storefront using Hydrogen React patterns) with a Notes blog and a Lexicon; TrendForge in production (real X ingest under a spend cap; MVP one radar + forge). Working in operator loops — Assign → Execute → Review.",
       tags: ["TypeScript", "React", "Python", "AI tools"],
     },
   ],
 
   projects: [
     {
+      title: "Operator Goods",
+      tagline: "Independent operator apparel + desk gear",
+      description:
+        "Vite/React storefront following Hydrogen React patterns. Includes a Notes blog (field notes on AI agency / operator loops) and a Lexicon defining Call, Gate, Scaffold, Charter, Taste, and Judgment. Shopify link in progress; local catalog works.",
+      tech: ["Vite", "React", "TypeScript", "Hydrogen React", "Tailwind"],
+      demoUrl: null,
+      repoUrl: null,
+      featured: true,
+      bento: "large" as const,
+    },
+    {
       title: "TrendForge",
       tagline: "Spot narratives before they go mainstream",
       description:
-        "Helps you turn live X signals into unique content angles — without auto-posting.",
+        "Production app (under a spend cap): turn live X signals into unique angles. MVP: one radar + forge (copy-paste thread).",
       tech: ["React", "TypeScript", "Vite", "Recharts", "Vercel"],
       demoUrl: "https://trendforge-opal.vercel.app",
       repoUrl: null,

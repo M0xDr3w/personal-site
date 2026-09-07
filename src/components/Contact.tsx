@@ -44,8 +44,7 @@ export function Contact() {
           Let's connect
         </h2>
         <p className="mx-auto mt-4 max-w-md text-muted">
-          Hiring: in-person product / solutions engineer, Toronto. Collabs and
-          feedback welcome too.
+          Building in public from Grand Valley, Ontario. Projects, feedback, and hellos welcome.
         </p>
 
         <a
