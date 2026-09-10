@@ -1,6 +1,6 @@
 export const profile = {
   name: "Andrew Macdonald",
-  avatar: "/andrew-avatar.jpg",
+  avatar: "./andrew-avatar.jpg",
   firstName: "Andrew",
   lastName: "Macdonald",
   headline: "Building in public — coding and AI tools.",
