@@ -63,10 +63,10 @@ export function Projects() {
                 project.bento === "large" ? "bento-large" : ""
               }`}
             >
-              <p className="text-sm font-medium text-accent">{project.tagline}</p>
-              <h3 className="mt-1 font-serif text-2xl text-ink md:text-3xl">
+              <h3 className="font-serif text-2xl text-ink md:text-3xl">
                 {project.title}
               </h3>
+              <p className="mt-1 text-sm font-medium text-accent">{project.tagline}</p>
               <p className="mt-3 max-w-prose leading-relaxed text-muted">
                 {project.description}
               </p>
