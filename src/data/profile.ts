@@ -43,9 +43,9 @@ export const profile = {
       title: "Operator Goods",
       tagline: "Independent operator apparel + desk gear",
       description:
-        "Vite/React storefront following Hydrogen React patterns. Includes a Notes blog (field notes on AI agency / operator loops) and a Lexicon defining Call, Gate, Scaffold, Charter, Taste, and Judgment. Shopify link in progress; local catalog works.",
+        "Vite/React storefront following Hydrogen React patterns. Includes a Notes blog (field notes on AI agency / operator loops) and a Lexicon defining Call, Gate, Scaffold, Charter, Taste, and Judgment. Domain secured at operatorgoods.com — sourcing in progress; store opens when inventory is ready.",
       tech: ["Vite", "React", "TypeScript", "Hydrogen React", "Tailwind"],
-      demoUrl: null,
+      demoUrl: "https://operatorgoods.com",
       repoUrl: null,
       featured: true,
       bento: "large" as const,
@@ -78,7 +78,7 @@ export const profile = {
       description:
         "Lets you practice Grok Build workflows in a safe terminal simulator.",
       tech: ["React", "TypeScript", "Tailwind", "framer-motion"],
-      demoUrl: null,
+      demoUrl: "https://groksim.vercel.app",
       repoUrl: "https://github.com/M0xDr3w/groksim",
       featured: true,
       bento: "default" as const,
