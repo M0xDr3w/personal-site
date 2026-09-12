@@ -23,6 +23,15 @@ function LinkIcon({ icon }: { icon: string }) {
       </svg>
     );
   }
+  if (icon === "starlink") {
+    return (
+      <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="2.25" fill="currentColor" stroke="none" />
+        <path strokeLinecap="round" d="M12 4.5v2.25M12 17.25V19.5M4.5 12h2.25M17.25 12H19.5M6.75 6.75l1.6 1.6M15.65 15.65l1.6 1.6M17.25 6.75l-1.6 1.6M8.35 15.65l-1.6 1.6" />
+        <circle cx="12" cy="12" r="6.5" opacity="0.55" />
+      </svg>
+    );
+  }
 
   return null;
 }
