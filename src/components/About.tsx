@@ -23,18 +23,6 @@ export function About() {
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
-
-        <div className="mt-10 flex flex-wrap gap-3">
-          {profile.highlights.map((item) => (
-            <div
-              key={item.label}
-              className="rounded-xl border border-border bg-card px-4 py-3"
-            >
-              <p className="text-sm font-semibold text-ink">{item.value}</p>
-              <p className="mt-0.5 text-xs text-muted">{item.label}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

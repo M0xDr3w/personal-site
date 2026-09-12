@@ -13,15 +13,8 @@ export const profile = {
 
   about: [
     "I'm a hands-on builder who likes figuring things out and leaving things better than I found them. My path runs real estate → energy services → coding and AI work — and now I'm shipping side projects in public.",
-    "Building in public from Grand Valley, Ontario. Current focus: Operator Goods (operator apparel + desk gear; Notes blog + Lexicon) and TrendForge (production radar + forge under a spend cap).",
+    "Building in public from Grand Valley, Ontario. Current focus: Operator Goods (operator apparel + desk gear; Notes blog + Lexicon) and TrendForge (real-time X sentiment and LLM analysis AI tools).",
     "When I'm offline: climbing, fishing, and hiking — usually somewhere windy.",
-  ],
-
-  highlights: [
-    { label: "Now", value: "Building in public · Grand Valley, ON" },
-    { label: "Building in public", value: "Operator Goods + TrendForge" },
-    { label: "Loops", value: "Assign → Execute → Review" },
-    { label: "Path", value: "Real estate → Energy services → Coding & AI" },
   ],
 
   experience: [
@@ -103,32 +96,13 @@ export const profile = {
     },
     {
       title: "Notes",
-      tagline: "Field notes on operator loops",
-      description: "Short field notes on Call, Gate, Scaffold, and the Assign → Execute → Review loop. Link when the Notes app is public.",
+      tagline: "Weekly blog on working with AI agents",
+      description:
+        "A weekly blog about working with AI agents — operator loops, judgment calls, and what actually holds up in practice. Link when the Notes app is public.",
       tech: ["Vite", "React", "MDX"],
       demoUrl: null,
       repoUrl: null,
-      featured: false,
-      bento: "default" as const,
-    },
-    {
-      title: "Budget",
-      tagline: "Personal spend tracker",
-      description: "Local budget app for categories, envelopes, and a clean spend view — still private while I ship the public cut.",
-      tech: ["Vite", "React", "TypeScript"],
-      demoUrl: null,
-      repoUrl: null,
-      featured: false,
-      bento: "default" as const,
-    },
-    {
-      title: "Regex Forge",
-      tagline: "Say it in English, get a regex",
-      description: "Turns a plain-English match description into a tested regex you can verify live.",
-      tech: ["Next.js", "TypeScript", "xAI API"],
-      demoUrl: null,
-      repoUrl: null,
-      featured: false,
+      featured: true,
       bento: "default" as const,
     },
   ],
@@ -144,6 +118,11 @@ export const profile = {
       label: "Follow",
       url: "https://x.com/M0xDr3w",
       icon: "x" as const,
+    },
+    {
+      label: "Starlink",
+      url: "https://www.starlink.com?referral=RC-DF-10071628-84752-97",
+      icon: "starlink" as const,
     },
   ],
 } as const;
