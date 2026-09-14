@@ -15,7 +15,7 @@ export function Experience() {
           Path
         </p>
         <h2 className="font-serif text-3xl text-ink md:text-4xl">
-          Where I've been
+          The path so far
         </h2>
 
         <div className="mt-12 space-y-10">
