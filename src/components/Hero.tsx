@@ -1,5 +1,7 @@
 import { profile } from "../data/profile";
 
+const starlinkUrl = profile.links.find((link) => link.icon === "starlink")?.url;
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden px-6 pb-24 pt-16 md:pb-32 md:pt-24">
@@ -60,6 +62,16 @@ export function Hero() {
             >
               Say hello
             </a>
+            {starlinkUrl && (
+              <a
+                href={starlinkUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-border px-6 py-3 text-sm font-medium text-ink transition hover:border-accent/50 hover:text-accent"
+              >
+                Starlink referral
+              </a>
+            )}
           </div>
         </div>
       </div>
