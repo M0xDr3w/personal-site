@@ -151,9 +151,9 @@ export const profile = {
       title: "Notes",
       tagline: "Weekly writing on working with AI agents",
       description:
-        "A weekly blog about working with AI agents — what holds up in practice, where judgment still matters, and how to keep the loop honest. Public link coming soon.",
+        "A weekly blog about working with AI agents — what holds up in practice, where judgment still matters, and how to keep the loop honest. The notes live on Operator Goods and are available to read online now.",
       tech: ["Vite", "React", "MDX"],
-      demoUrl: null,
+      demoUrl: "https://operatorgoods.com/notes",
       repoUrl: null,
       featured: true,
       bento: "default" as const,
