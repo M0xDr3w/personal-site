@@ -53,6 +53,9 @@ export function Projects() {
       <h2 className="font-serif text-3xl text-ink md:text-4xl">
         Projects I'm shipping
       </h2>
+      <p className="mt-3 max-w-prose leading-relaxed text-muted">
+        Experiments and side projects I'm shipping in the open.
+      </p>
 
       <div className="mt-10 space-y-4">
         {featured.map((project) => (

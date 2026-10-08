@@ -9,7 +9,7 @@ export const profile = {
   email: "drewmax@spacetrendr.com",
   resume: "./Andrew-Macdonald-Resume.pdf",
   resumeName: "Andrew-Macdonald-Resume.pdf",
-  proof: "Right now: Operator Goods",
+  proof: "Right now I'm building Operator Goods",
 
   about: [
     "I'm a hands-on builder. I like figuring things out and leaving things better than I found them. I started in real estate, spent years in oil and gas field work, and now I write code and build AI tools — shipping projects in the open.",
