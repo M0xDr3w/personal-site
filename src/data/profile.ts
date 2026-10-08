@@ -9,11 +9,11 @@ export const profile = {
   email: "drewmax@spacetrendr.com",
   resume: "./Andrew-Macdonald-Resume.pdf",
   resumeName: "Andrew-Macdonald-Resume.pdf",
-  proof: "Right now: Operator Goods and TrendForge",
+  proof: "Right now: Operator Goods",
 
   about: [
     "I'm a hands-on builder. I like figuring things out and leaving things better than I found them. I started in real estate, spent years in oil and gas field work, and now I write code and build AI tools — shipping projects in the open.",
-    "I work from Grand Valley, Ontario. Two things I'm focused on: Operator Goods (workwear and desk gear, plus a weekly blog on using AI agents) and TrendForge (tools that read live conversation on X and help turn it into useful writing).",
+    "I work from Grand Valley, Ontario. I'm focused on Operator Goods (workwear and desk gear, plus a weekly blog on using AI agents).",
     "When I'm offline: climbing, fishing, and hiking — usually somewhere windy.",
   ],
 
@@ -86,7 +86,7 @@ export const profile = {
     {
       title: "Software and AI",
       description:
-        "Building Operator Goods (a small store with a notes blog) and TrendForge (a live app that watches X and helps draft content with AI). I work in short loops: pick the job, do the work, then review what shipped.",
+        "Building Operator Goods (a small store with a notes blog). I work in short loops: pick the job, do the work, then review what shipped.",
       tags: ["TypeScript", "React", "Python", "AI tools"],
     },
   ],
@@ -99,17 +99,6 @@ export const profile = {
         "A shop for operator apparel and desk gear, with a notes blog about working with AI agents and a short lexicon of terms I use day to day. Domain is live at operatorgoods.com — product sourcing is still underway before the store fully opens.",
       tech: ["Vite", "React", "TypeScript", "Hydrogen React", "Tailwind"],
       demoUrl: "https://operatorgoods.com",
-      repoUrl: null,
-      featured: true,
-      bento: "large" as const,
-    },
-    {
-      title: "TrendForge",
-      tagline: "Read the conversation. Draft a better angle.",
-      description:
-        "A live web app that watches real-time conversation on X, reads the mood, and uses AI to help you draft fresh writing. Open the radar and try the writing tools online.",
-      tech: ["React", "TypeScript", "Vite", "Recharts", "Vercel"],
-      demoUrl: "https://trendforge-opal.vercel.app",
       repoUrl: null,
       featured: true,
       bento: "large" as const,
