@@ -109,8 +109,8 @@ export const profile = {
       description:
         "A single-file raycaster game with combat feel, controller haptics, and a live boss fight you can play in the browser.",
       tech: ["HTML", "Canvas", "WebHID", "Vercel"],
-      demoUrl: "https://grokdoom.vercel.app",
-      repoUrl: "https://github.com/M0xDr3w/grok-doom",
+      demoUrl: "https://m0xdr3w.github.io/grok-doom-fictional-video-game/",
+      repoUrl: "https://github.com/M0xDr3w/grok-doom-fictional-video-game",
       featured: true,
       bento: "default" as const,
     },
